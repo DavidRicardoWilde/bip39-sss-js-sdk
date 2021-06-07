@@ -10,6 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/DavidRicardoWilde/bip39-sss-js-sdk"
+
   },
   "engines": {
     "node": ">=10"
@@ -36,9 +37,10 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "bip39-sss-sdk",
+  "name": "bip39-sss-js-sdk",
   "author": "David Wilde",
   "module": "dist/shamir-bip39.esm.js",
+  "description": "sss for bip39 (eth) js sdk",
   "jest": {
     "coverageThreshold": {
       "global": {
