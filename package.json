@@ -1,0 +1,80 @@
+
+{
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidRicardoWilde/bip39-sss-js-sdk"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "release": "tsdx build && np",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "bip39-sss-sdk",
+  "author": "David Wilde",
+  "module": "dist/shamir-bip39.esm.js",
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "size-limit": [
+    {
+      "path": "dist/shamir-bip39.cjs.production.min.js",
+      "limit": "120 KB"
+    },
+    {
+      "path": "dist/shamir-bip39.esm.js",
+      "limit": "120 KB"
+    }
+  ],
+  "dependencies": {
+    "shamir-bip39": "^0.1.3",
+    "randombytes": "^2.1.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.10.1",
+    "@types/create-hash": "^1.2.2",
+    "@types/lodash": "^4.14.168",
+    "@types/randombytes": "^2.0.0",
+    "husky": "^5.1.3",
+    "lodash": "^4.17.21",
+    "np": "^7.4.0",
+    "size-limit": "^4.10.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.3.2"
+
+  }
+}
